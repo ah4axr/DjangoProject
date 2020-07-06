@@ -1,0 +1,63 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+        Sports Highlights - Search
+    </title>
+</head>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'highlights/style.css' %}">
+
+<body>
+    <div id='content'>
+        <h1>Sports Highlights</h1>
+        <h4>Enter Search Criteria:</h4>
+        <div id='searchCriteria'>
+            <div id='searchCriteriaLeft'>
+                <label for="pName">Player Name:</label><br>
+                <input class="form-control" id="playerName" type="text" placeholder="Search by Player Name"><br>
+                <label for="tName">Team Name:</label><br>
+                <input class="form-control" id="teamName" type="text" placeholder="Search by Team Name"><br>
+                <label for="cName">Coach Name:</label><br>
+                <input class="form-control" id="coachName" type="text" placeholder="Search by Coach Name"><br>
+                <label for="gameDate">Game Date:</label><br>
+                <input class="form-control" id="gameDate" type="date" placeholder="Search by Game Date"><br>
+            </div>
+            <div id='searchCriteriaRight'>
+                <label for="pAge">Player Age:</label><br>
+                <input class="form-control" id="playerAge" type="text" placeholder="Search by Player Age"><br>
+                <label for="position">Position:</label>
+                <select class="form-control" id="position">
+                    <option selected>Search by Player Position</option>
+                    <option>Point Guard</option>
+                    <option>Shooting Guard</option>
+                    <option>Center</option>
+                    <option>Small Forward</option>
+                    <option>Power Forward</option>
+                </select>
+                <label for="city">City:</label><br>
+                <input class="form-control" id="city" type="text" placeholder="Search by City"><br>
+                <label for="highlightType">Highlight Type:</label>
+                <select class="form-control" id="highlightType">
+                    <option selected>Search by Highlight Type</option>
+                    <option>Dunks</option>
+                    <option>Two Pointers</option>
+                    <option>Three Pointers</option>
+                    <option>Assists</option>
+                    <option>Dribbling</option>
+                </select>
+            </div>
+        </div>
+        <div id="submitButton">
+            <button type="button" class="btn btn-dark"><a href="{% url 'highlights:results' %}">Search</a></button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
