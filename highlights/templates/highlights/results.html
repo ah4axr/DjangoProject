@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,9 +14,27 @@
     <div id="content", name="content", class='main'>
         <div class="row justify-content-center">
             <div class="col-20">
-                <h1>Showing Results For: </h1>
-
-                
+                <h1>Showing Results Based on: </h1>
+                {% if highlight_fields %}
+                    <tr>
+                        <th>Player Name: </th>
+                        <td>{{ highlight_fields.player_name }}</td>
+                        <th>Team Name: </th>
+                        <td>{{ highlight_fields.team_name }}</td>
+                        <th>Coach Name: </th>
+                        <td>{{ highlight_fields.coach_name }}</td>
+                        <th>Game Date: </th>
+                        <td>{{ highlight_fields.game_date }}</td>
+                        <th>Player Age: </th>
+                        <td>{{ highlight_fields.player_age }}</td>
+                        <th>Position: </th>
+                        <td>{{ highlight_fields.position }}</td>
+                        <th>City: </th>
+                        <td>{{ highlight_fields.city }}</td>
+                        <th>Hightlight Type: </th>
+                        <td>{{ highlight_fields.highlight_type }}</td>
+                    </tr>
+                {% endif %}
             <div id="submitButton">
                 <button type="button" class="btn btn-dark"><a href="{% url 'highlights:index' %}">Return to Search</a></button>
             </div>
