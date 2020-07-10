@@ -20,20 +20,10 @@
             <form method="post" id="searchForm">{% csrf_token %}
                 <div id='searchInputs'>
                     <div id='searchCriteriaLeft'>
-                        <label for="player_name">Player Name:</label><br>
-                        <input class="form-control" id="player_name" type="text" name="player_name" placeholder="Search by Player Name"><br>
-                        <label for="team_name">Team Name:</label><br>
-                        <input class="form-control" id="team_name" type="text" name="team_name" placeholder="Search by Team Name"><br>
-                        <label for="coach_name">Coach Name:</label><br>
-                        <input class="form-control" id="coach_name" type="text" name="coach_name" placeholder="Search by Coach Name"><br>
-                        <label for="game_date">Game Date:</label><br>
-                        <input class="form-control" id="game_date" type="date" name="game_date" placeholder="Search by Game Date"><br>
-                    </div>
-                    <div id='searchCriteriaRight'>
-                        <label for="player_age">Player Age:</label><br>
-                        <input class="form-control" id="player_age" type="number" name="player_age" placeholder="Search by Player Age" min="0" max="100"><br>
-                        <label for="position">Position:</label>
-                        <select class="form-control" name="position" id="position">
+                        <label for="player_lname">Player Last Name:</label><br>
+                        <input class="form-control" id="player_lname" type="text" name="player_lname" placeholder="Search by Player Last Name" required><br>
+                        <label for="player_position">Player Position:</label>
+                        <select class="form-control" name="player_position" id="player_position" required>
                             <option selected disabled value>Search by Position</option>
                             <option>Point Guard</option>
                             <option>Shooting Guard</option>
@@ -41,16 +31,14 @@
                             <option>Small Forward</option>
                             <option>Power Forward</option>
                         </select>
-                        <label for="city">City:</label><br>
-                        <input class="form-control" id="city" type="text" name="city" placeholder="Search by City"><br>
                         <label for="highlight_type">Highlight Type:</label>
-                        <select class="form-control" name="highlight_type" id="highlight_type">
+                        <select class="form-control" name="highlight_type" id="highlight_type" required>
                             <option selected disabled value>Search by Highlight Type</option>
-                            <option>Dunks</option>
-                            <option>Two Pointers</option>
-                            <option>Three Pointers</option>
-                            <option>Assists</option>
+                            <option>Dunk</option>
+                            <option>2PT</option>
+                            <option>3PT</option>
                             <option>Dribbling</option>
+                            <option>Passing</option>
                         </select>
                     </div>
                 </div>
